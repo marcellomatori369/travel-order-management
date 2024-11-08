@@ -20,14 +20,9 @@ class LoginController extends Controller
     {
         $input = $request->validated();
 
-        $credentials = [
-            'email' => $input['email'],
-            'password' => $input['password'],
-        ];
+        $user = $this->user->where('email', $input['email'])->first();
 
-        $user = $this->user->where('email', $credentials['email'])->first();
-
-        if (! is_null($user) && auth()->validate($credentials)) {
+        if (! is_null($user) && auth()->validate($input)) {
             return new JsonResource(Login::run($user));
         }
 
