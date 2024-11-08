@@ -1,6 +1,6 @@
 # Teste-Onfly-PHP
 
-Microsserviço para gerenciar pedidos de viagem corporativa o teste da vaga de desenvolvedor php.
+Microsserviço para gerenciar pedidos de viagens corporativas.
 
 ## Informações preliminares
 
@@ -15,7 +15,7 @@ Microsserviço para gerenciar pedidos de viagem corporativa o teste da vaga de d
 - [Git]
 - [Docker]
 - [Docker-compose]
-- [Ferramenta-de-processamento-API-REST] (utilizei o insomia com estes arquivos de rota: )
+- [Ferramenta-de-processamento-API-REST] (utilizei o insomia com estes arquivos de rota: `https://drive.google.com/drive/folders/16nxVZrzPz0wVgL2zXtQMwd6O9weqTIKk?usp=sharing`)
 
 ## Build das imagens Docker
 
@@ -26,6 +26,8 @@ Execute o seguinte comando na raiz do projeto para configurar as imagens:
 ## Configuração
 
 Como o projeto foi configurado com laravel sail, não vamos usar o comando padrão do docker `docker compose exec ...`, em vez disso utilizaremos `./vendor/bin/sail ...`.
+
+Caso por algum motivo seus containers foram dropados, execute novamente o comando `./vendor/bin/sail up`.
 
 ### Configuração do ambiente
 
