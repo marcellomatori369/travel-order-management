@@ -4,7 +4,7 @@ use App\Http\Controllers\PingController;
 use App\Http\Controllers\TravelRequestController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use Illuminate\Routing\Router;;
+use Illuminate\Routing\Router;
 
 /* @var $router Router */
 

@@ -6,7 +6,7 @@ Microsserviço para gerenciar pedidos de viagens corporativas.
 
 1) O projeto foi configurado utilizando o laravel sail `https://laravel.com/docs/11.x/sail`, então no momento de subir o container docker pela primeira vez pode ocorrer uma pequena demora.
 2) Existem dois tipos de usuários que podem ser cadastrados no serviço:
-- Interno: contêm controle total sobre o serviço, podendo atualizar status de pedidos e visualizar pedidos de todos os outros usuários. Para criar um usuário interno basta utilizar o dominio onfly.com no cadastro do email (ex: marcello@onfly.com). 
+- Interno: contêm controle total sobre o serviço, podendo atualizar status de pedidos e visualizar pedidos de todos os outros usuários. Para criar um usuário interno basta utilizar o domínio `onfly.com` no cadastro do email (ex: marcello@onfly.com). 
 - Padrão: contêm ações limitadas sobre o serviço podendo somente se cadastrar, logar, fazer um pedido de viagem e visuaizar seus pedidos.
 3) Os pedidos de viagens são somente para cidades do Brasil, isso foi uma opção minha para tornar um pouco mais dinâmico a utilização do serviço. Foi utilizado a api `https://brasilapi.com.br/docs` para efetuar as validações dos destinos inseridos.
 
@@ -27,7 +27,7 @@ Execute o seguinte comando na raiz do projeto para configurar as imagens:
 
 Como o projeto foi configurado com laravel sail, não vamos usar o comando padrão do docker `docker compose exec ...`, em vez disso utilizaremos `./vendor/bin/sail ...`.
 
-Caso por algum motivo seus containers foram dropados, execute novamente o comando `./vendor/bin/sail up`.
+Caso por algum motivo seus containers foram dropados, execute novamente o comando `./vendor/bin/sail up` ou `./vendor/bin/sail up -d` caso não queira ver os logs.
 
 ### Configuração do ambiente
 

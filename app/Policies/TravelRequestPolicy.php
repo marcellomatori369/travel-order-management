@@ -2,8 +2,6 @@
 
 namespace App\Policies;
 
-use App\Models\Channel;
-use App\Models\PlatformProvider;
 use App\Models\TravelRequest;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;

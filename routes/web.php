@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\PingController;
-use Illuminate\Routing\Router;;
+use Illuminate\Routing\Router;
 
 /* @var $router Router */
 

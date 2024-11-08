@@ -16,6 +16,7 @@ class TravelRequestResource extends JsonResource
             'returned_at' => $this->returned_at,
             'status' => $this->status,
             'updated_at' => $this->updated_at,
+            'user_id' => $this->user_id,
         ];
     }
 }

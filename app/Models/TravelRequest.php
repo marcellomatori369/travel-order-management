@@ -23,7 +23,7 @@ class TravelRequest extends Model
         'destiny',
         'returned_at',
         'status',
-        'update'
+        'updated_at',
     ];
 
     protected function casts(): array

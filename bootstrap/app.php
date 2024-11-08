@@ -15,7 +15,6 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Spatie\QueryBuilder\Exceptions\InvalidSortQuery;
 use Spatie\QueryBuilder\Exceptions\InvalidFilterQuery;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Http\Exceptions\ThrottleRequestsException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
@@ -54,11 +53,6 @@ return Application::configure(basePath: dirname(__DIR__))
                 $exception instanceof AuthorizationException => [
                     Response::HTTP_FORBIDDEN,
                     HttpResponse::FORBIDDEN,
-                    null,
-                ],
-                $exception instanceof ThrottleRequestsException => [
-                    Response::HTTP_TOO_MANY_REQUESTS,
-                    HttpResponse::TOO_MANY_REQUESTS,
                     null,
                 ],
                 $exception instanceof ModelNotFoundException,

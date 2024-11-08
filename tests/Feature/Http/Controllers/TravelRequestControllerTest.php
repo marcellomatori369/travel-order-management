@@ -243,6 +243,7 @@ class TravelRequestControllerTest extends ControllerTestCase
 			'returned_at',
 			'status',
 			'updated_at',
+            'user_id',
         ];
     }
 }
