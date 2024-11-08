@@ -45,7 +45,7 @@ class TravelRequestControllerTest extends ControllerTestCase
     public function test_index_travel_request_endpoint_structure_users_permission(): void
     {
         $requestedUser = User::factory()->create();
-        $randomUser = User::factory()->create();
+        $otherUser = User::factory()->create();
 
         TravelRequest::factory()->for($requestedUser)->createMany([
             ['status' =>Status::REQUESTED],
@@ -54,7 +54,7 @@ class TravelRequestControllerTest extends ControllerTestCase
 
         $this->actingAs($requestedUser)->get(route('v1.travel-requests.index'))->assertJsonCount(2, 'data');
         $this->actingAs($this->internalUser)->get(route('v1.travel-requests.index'))->assertJsonCount(2, 'data');
-        $this->actingAs($randomUser)->get(route('v1.travel-requests.index'))->assertJsonCount(0, 'data');
+        $this->actingAs($otherUser)->get(route('v1.travel-requests.index'))->assertJsonCount(0, 'data');
     }
 
     public function test_index_travel_request_endpoint_structure_filter_by_status(): void

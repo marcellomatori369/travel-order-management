@@ -17,7 +17,7 @@ class RegisterControllerTest extends ControllerTestCase
         Event::fake();
     }
 
-    public function test_checkout_register_endpoint_structure(): void
+    public function test_register_endpoint_structure(): void
     {
         $params = [
             'name' => 'Marcello Matori',
@@ -41,7 +41,7 @@ class RegisterControllerTest extends ControllerTestCase
     }
 
     #[DataProvider('registerValidationProvider')]
-    public function test_checkout_register_endpoint_validation(array $messages, array $data): void
+    public function test_register_endpoint_validation(array $messages, array $data): void
     {
         User::factory()->create(['email' => 'marcello.matori@onfly.com']);
 
