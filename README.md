@@ -23,6 +23,11 @@ Execute o seguinte comando na raiz do projeto para configurar as imagens:
 
 `./vendor/bin/sail up`
 
+pode ser necessário conceder permissão para o acesso das pastas. No linux pode ser excutado estes comandos para conceder as permissões:
+
+`chmod 777 ./vendor/bin/sail`
+`chmod 777 ./vendor/laravel/sail/bin/sail`
+
 ## Configuração
 
 Como o projeto foi configurado com laravel sail, não vamos usar o comando padrão do docker `docker compose exec ...`, em vez disso utilizaremos `./vendor/bin/sail ...`.
@@ -35,7 +40,7 @@ Caso por algum motivo seus containers foram dropados, execute novamente o comand
 2) Execute o comando `./vendor/bin/sail composer install` para instalar as dependências do projeto
 3) Gere a chave de criptografia do Laravel com o comando `./vendor/bin/sail php artisan key:generate`
 4) Gere o secret do JWT com o comando `./vendor/bin/sail php artisan jwt:secret` (caso ele não seja adicionado direto no seu .env, copie a chave gerada e cole manualmente no `JWT_SECRET=`)
-5) Execute as migrations do projeto com `./vendor/bin/sail php artisan migrate` (talvez elas já tenham sido migradas no processo de configurar as imagens Docker)
+5) Execute as migrations do projeto com `./vendor/bin/sail php artisan migrate`
 
 - A url base para acessar as rotas é: `http://localhost:8000/api/rota-desejada`.
 - As referências das rotas estão no arquivo `routes-reference.json`.
