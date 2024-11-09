@@ -23,8 +23,8 @@ Microsserviço para gerenciar pedidos de viagens corporativas.
 
 pode ser necessário conceder permissão para o acesso das pastas. No linux pode ser excutado estes comandos para conceder as permissões:
 
-`chmod 777 ./vendor/bin/sail`
-`chmod 777 ./vendor/laravel/sail/bin/sail`
+- `chmod 777 ./vendor/bin/sail`
+- `chmod 777 ./vendor/laravel/sail/bin/sail`
 
 ## Configuração
 
