@@ -32,7 +32,7 @@ class TravelRequestControllerTest extends ControllerTestCase
     public function test_index_travel_request_endpoint_structure(): void
     {
         TravelRequest::factory()->for($this->internalUser)->createMany([
-            ['status' =>Status::REQUESTED],
+            ['status' => Status::REQUESTED],
             ['status' => Status::APPROVED],
         ]);
 
@@ -48,7 +48,7 @@ class TravelRequestControllerTest extends ControllerTestCase
         $otherUser = User::factory()->create();
 
         TravelRequest::factory()->for($requestedUser)->createMany([
-            ['status' =>Status::REQUESTED],
+            ['status' => Status::REQUESTED],
             ['status' => Status::APPROVED],
         ]);
 
@@ -60,7 +60,7 @@ class TravelRequestControllerTest extends ControllerTestCase
     public function test_index_travel_request_endpoint_structure_filter_by_status(): void
     {
         TravelRequest::factory()->for($this->internalUser)->createMany([
-            ['status' =>Status::REQUESTED],
+            ['status' => Status::REQUESTED],
             ['status' => Status::APPROVED],
             ['status' => Status::APPROVED],
         ]);
@@ -76,15 +76,18 @@ class TravelRequestControllerTest extends ControllerTestCase
     public function test_index_travel_request_endpoint_structure_sort_by_created_at(): void
     {
         $firstTravelRequest = TravelRequest::factory()->for($this->internalUser)->create([
-            'status' =>Status::REQUESTED, 'created_at' => now(),
+            'status' => Status::REQUESTED,
+            'created_at' => now(),
         ]);
 
         $secondTravelRequest = TravelRequest::factory()->for($this->internalUser)->create([
-            'status' => Status::APPROVED, 'created_at' => now()->subMonth(),
+            'status' => Status::APPROVED,
+            'created_at' => now()->subMonth(),
         ]);
 
         $thirdTravelRequest = TravelRequest::factory()->for($this->internalUser)->create([
-            'status' => Status::APPROVED, 'created_at' => now()->subMonths(2),
+            'status' => Status::APPROVED,
+            'created_at' => now()->subMonths(2),
         ]);
 
         $this->actingAs($this->internalUser)->get(route('v1.travel-requests.index', [
