@@ -1,0 +1,142 @@
+{
+    "register": {
+        "register": {
+            "filters": [],
+            "sorts": [],
+            "parameters": [],
+            "payload": {
+                "parameters": [
+                    {
+                        "key": "name",
+                        "type": "string",
+                        "values": ["Marcello", "teste", "um nome", "..."]
+                    },
+                    {
+                        "key": "email",
+                        "type": "string",
+                        "values": ["a@email.com", "teste@onfly.com", "oloco@gmail.com", "..."]
+                    },
+                    {
+                        "key": "password",
+                        "type": "string",
+                        "values": ["Pass1234", "teste123", "umasenha", "..."]
+                    },
+                    {
+                        "key": "password_confirmation",
+                        "type": "string",
+                        "values": ["Pass1234", "teste123", "umasenha", "..."]
+                    }
+                ],
+
+                "example": {
+                    "name": "Marcello",
+                    "email": "marcelo@onfly.com",
+                    "password": "Pass1234",
+                    "password_confirmation": "Pass1234"
+                }
+            }
+        }
+    },
+
+    "login": {
+        "login": {
+            "filters": [],
+            "sorts": [],
+            "parameters": [],
+            "payload": {
+                "parameters": [
+                    {
+                        "key": "email",
+                        "type": "string",
+                        "values": ["a@email.com", "teste@onfly.com", "oloco@gmail.com", "..."]
+                    },
+                    {
+                        "key": "password",
+                        "type": "string",
+                        "values": ["Pass1234", "teste123", "umasenha", "..."]
+                    }
+                ],
+
+                "example": {
+                    "email": "marcello@onfly.com",
+                    "password": "Pass1234"
+                }
+            }
+        }
+    },
+
+    "travel_requests": {
+        "index": {
+            "filters": {
+                "filter": "status",
+                "values": ["approved", "canceled", "requested"]
+            },
+            "sorts": ["id", "created_at"],
+            "parameters": [],
+            "payload": {}
+        },
+
+        "show": {
+            "filters": [],
+            "sorts": [],
+            "parameters": ["travelRequest"],
+            "payload": {}
+        },
+
+        "create": {
+            "filters": [],
+            "sorts": [],
+            "parameters": [],
+            "payload": {
+                "parameters": [
+                    {
+                        "key": "state",
+                        "type": "string",
+                        "values": ["MG", "SP", "MA", "..."]
+                    },
+                    {
+                        "key": "city",
+                        "type": "string",
+                        "values": ["Betim", "Contagem", "Belo Horizonte", "..."]
+                    },
+                    {
+                        "key": "departed_at",
+                        "type": "int",
+                        "values": [1736167964, 1836167965, 1936167966, "..."]
+                    },
+                    {
+                        "key": "returned_at",
+                        "type": "int",
+                        "values": [1736167964, 1836167965, 1936167966, "..."]
+                    }
+                ],
+
+                "example": {
+                    "state": "MG",
+                    "city": "Betim",
+                    "departed_at": 1736167964,
+                    "returned_at": 1743943964
+                }
+            }
+        },
+
+        "update": {
+            "filters": [],
+            "sorts": [],
+            "parameters": [],
+            "payload": {
+                "parameters": [
+                    {
+                        "key": "status",
+                        "type": "string",
+                        "values": ["approved", "canceled"]
+                    }
+                ],
+
+                "example": {
+                    "status": "approved"
+                }
+            }
+        }
+    }
+}

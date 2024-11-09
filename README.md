@@ -37,7 +37,8 @@ Caso por algum motivo seus containers foram dropados, execute novamente o comand
 4) Gere o secret do JWT com o comando `./vendor/bin/sail php artisan jwt:secret` (caso ele não seja adicionado direto no seu .env, copie a chave gerada e cole manualmente no `JWT_SECRET=`)
 5) Execute as migrations do projeto com `./vendor/bin/sail php artisan migrate` (talvez elas já tenham sido migradas no processo de configurar as imagens Docker)
 
-A url para acessar as rotas criadas é: `http://localhost:8000/api/rota-desejada`
+- A url base para acessar as rotas é: `http://localhost:8000/api/rota-desejada`.
+- As referências das rotas estão no arquivo `routes-reference.json`.
 
 ### Executando testes
 
