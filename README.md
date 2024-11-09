@@ -21,10 +21,15 @@ Microsserviço para gerenciar pedidos de viagens corporativas.
 1) Copie o arquivo `.env.example` localizado na raiz do projeto para `.env`.
 2) Execute o seguinte comando na raiz do projeto para configurar as imagens: `./vendor/bin/sail up`
 
-pode ser necessário conceder permissão para o acesso das pastas. No linux pode ser excutado estes comandos para conceder as permissões:
+Pode ser necessário conceder permissão para o acesso das pastas. No linux pode ser excutado estes comandos para conceder as permissões:
 
 - `chmod 777 ./vendor/bin/sail`
 - `chmod 777 ./vendor/laravel/sail/bin/sail`
+
+Caso ocorra algum problema com alguma das imagens, execute os seguintes comandos para corrigir:
+
+- `./vendor/bin/sail down --volumes`
+- `./vendor/bin/sail up --build`
 
 ## Configuração
 
